@@ -1,7 +1,10 @@
 import React from "react";
+import { authContext } from '../../adalConfig';
+
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
+
 // core components
 import GridItem from "../../components/Grid/GridItem.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
@@ -34,10 +37,25 @@ const styles = {
   }
 };
 
-const useStyles = makeStyles(styles);
+class UserProfile extends React.Component {
 
-export default function UserProfile() {
-  const classes = useStyles();
+  constructor(props){
+    super(props);
+    this.state = {
+      username: "John Doe",
+      usermail: "johndoe@gmail.com",
+    }
+  };
+
+  componentDidMount() {
+      let user = authContext.getCachedUser();
+      let username = user.profile.name;
+      let usermail = user.userName;
+      this.setState({username:username, usermail:usermail});
+  }
+
+  render(){
+    const { classes } = this.props;
   return (
     <div>
       <GridContainer>
@@ -159,20 +177,15 @@ export default function UserProfile() {
               </a>
             </CardAvatar>
             <CardBody profile>
-              <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
-              <h4 className={classes.cardTitle}>Alec Thompson</h4>
-              <p className={classes.description}>
-                Don{"'"}t be scared of the truth because we need to restart the
-                human foundation in truth And I love you like Kanye loves Kanye
-                I love Rick Owens’ bed design but the back is...
-              </p>
-              <Button color="primary" round>
-                Follow
-              </Button>
+              <h3 className={classes.cardTitle}>{this.state.username}</h3>
+              <h5 className={classes.cardCategory}>{this.state.usermail}</h5>
             </CardBody>
           </Card>
         </GridItem>
       </GridContainer>
     </div>
   );
+  }
 }
+
+export default withStyles(styles) (UserProfile);

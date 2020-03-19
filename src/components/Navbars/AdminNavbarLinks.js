@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { authContext } from '../../adalConfig';
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -15,6 +17,7 @@ import Person from "@material-ui/icons/Person";
 import Notifications from "@material-ui/icons/Notifications";
 import Search from "@material-ui/icons/Search";
 // core components
+
 import CustomInput from "../CustomInput/CustomInput.js";
 import Button from "../CustomButtons/Button.js";
 
@@ -45,6 +48,9 @@ export default function AdminNavbarLinks() {
   };
   const handleCloseProfile = () => {
     setOpenProfile(null);
+  };
+  const handleLogout = () => {
+    authContext.logOut()
   };
   return (
     <div>
@@ -181,11 +187,15 @@ export default function AdminNavbarLinks() {
                 <ClickAwayListener onClickAway={handleCloseProfile}>
                   <MenuList role="menu">
                     <MenuItem
+                      component={Link}
                       onClick={handleCloseProfile}
+                      to={"/admin/user"}
+
                       className={classes.dropdownItem}
                     >
                       Profile
                     </MenuItem>
+
                     <MenuItem
                       onClick={handleCloseProfile}
                       className={classes.dropdownItem}
@@ -194,7 +204,7 @@ export default function AdminNavbarLinks() {
                     </MenuItem>
                     <Divider light />
                     <MenuItem
-                      onClick={handleCloseProfile}
+                      onClick={handleLogout}
                       className={classes.dropdownItem}
                     >
                       Logout

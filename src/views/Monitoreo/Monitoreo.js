@@ -32,11 +32,7 @@ import { bugs, website, server } from "../../variables/general.js";
 import styles from "../../assets/jss/material-dashboard-react/views/dashboardStyle.js";
 import axios from "axios";
 
-
-/*const useStyles = makeStyles(styles);
-const classes = useStyles();*/
-
-class Dashboard extends React.Component {
+class Monitoreo extends React.Component {
 
   constructor(props) {
     super(props);
@@ -136,8 +132,8 @@ class Dashboard extends React.Component {
 
     setColorAndLatestUpdate(statusResp){
 
-        console.log(statusResp[0].Time);
-        console.log(statusResp[0].status);
+        //console.log(statusResp[0].Time);
+        //console.log(statusResp[0].status);
 
         let s = "success";
         let w = "warning";
@@ -294,7 +290,7 @@ class Dashboard extends React.Component {
   }
 }
 
-export default withStyles(styles) (Dashboard);
+export default withStyles(styles) (Monitoreo);
 
 /*<p className={classes.cardCategory}>
                 <span className={classes.successText}>

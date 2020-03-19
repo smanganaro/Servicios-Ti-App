@@ -1,21 +1,39 @@
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
+import Monitoreo from "@material-ui/icons/Dashboard";
+import Disponibilidad from "@material-ui/icons/Check";
+import Noticias from '@material-ui/icons/Announcement';
 import Person from "@material-ui/icons/Person";
 import Notifications from "@material-ui/icons/Notifications";
 import Search from "@material-ui/icons/Search";
 // core components/views for Admin layout
-import DashboardPage from "./views/Dashboard/Dashboard.js";
+import MonitoreoPage from "./views/Monitoreo/Monitoreo.js";
 import UserProfile from "./views/UserProfile/UserProfile.js";
 import TableList from "./views/TableList/TableList.js";
 import NotificationsPage from "./views/Notifications/Notifications.js";
 import SearchPage from "./views/Search/Search.js";
+import DisponibilidadPage from "./views/Disponibilidad/Disponibilidad.js";
+import NoticiasPage from "./views/Noticias/Noticias.js";
 
 const routes = [
   {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: Dashboard,
-    component: DashboardPage,
+    path: "/noticias",
+    name: "Noticias",
+    icon: Noticias,
+    component: NoticiasPage,
+    layout: "/admin"
+  },
+  {
+    path: "/disponibilidad",
+    name: "Disponibilidad",
+    icon: Disponibilidad,
+    component: DisponibilidadPage,
+    layout: "/admin"
+  },
+  {
+    path: "/monitoreo",
+    name: "Monitoreo",
+    icon: Monitoreo,
+    component: MonitoreoPage,
     layout: "/admin"
   },
   {

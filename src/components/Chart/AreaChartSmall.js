@@ -155,6 +155,21 @@ class AreaChart extends React.Component {
                                                     fontFamily: 'Verdana'
                                             }*/
                                         },
+                                        tooltips:{
+                                            ticks: {
+                                                callbacks:{
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label;
+                                                    }
+                                                }
+                                            }
+                                        }
                          }} data={this.getChartData} />
 
         );
