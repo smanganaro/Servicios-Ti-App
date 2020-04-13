@@ -2,14 +2,14 @@
 import Monitoreo from "@material-ui/icons/Dashboard";
 import Disponibilidad from "@material-ui/icons/Check";
 import Noticias from '@material-ui/icons/Announcement';
-import Person from "@material-ui/icons/Person";
-import Notifications from "@material-ui/icons/Notifications";
+//import Person from "@material-ui/icons/Person";
+//import Notifications from "@material-ui/icons/Notifications";
 import Search from "@material-ui/icons/Search";
 // core components/views for Admin layout
 import MonitoreoPage from "./views/Monitoreo/Monitoreo.js";
-import UserProfile from "./views/UserProfile/UserProfile.js";
-import TableList from "./views/TableList/TableList.js";
-import NotificationsPage from "./views/Notifications/Notifications.js";
+//import UserProfile from "./views/UserProfile/UserProfile.js";
+//import TableList from "./views/TableList/TableList.js";
+//import NotificationsPage from "./views/Notifications/Notifications.js";
 import SearchPage from "./views/Search/Search.js";
 import DisponibilidadPage from "./views/Disponibilidad/Disponibilidad.js";
 import NoticiasPage from "./views/Noticias/Noticias.js";
@@ -43,7 +43,7 @@ const routes = [
     component: SearchPage,
     layout: "/admin"
   },
-  {
+  /*{
     path: "/user",
     name: "User Profile",
     icon: Person,
@@ -63,7 +63,7 @@ const routes = [
     icon: Notifications,
     component: NotificationsPage,
     layout: "/admin"
-  },
+  },*/
 ];
 
 export default routes;

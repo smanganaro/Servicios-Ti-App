@@ -16,14 +16,16 @@ import styles from "../assets/jss/material-dashboard-react/layouts/adminStyle.js
 
 import bgImage from "../assets/img/sidebar-2.jpg";
 import logo from "../assets/img/prismalogo.jpg";
-import NagiosSearchHostService from "../components/NagiosSearch/NagiosSearchHostService";
 
+import NagiosSearchHostService from "../components/NagiosSearch/NagiosSearchHostService";
+import NewsDetail from "../components/News/NewsDetail";
 
 let ps;
 
 const switchRoutes = (
   <Switch>
     <Route path="/admin/search/:host/:service" component={NagiosSearchHostService}/>
+    <Route path="/admin/noticias/:id" component={NewsDetail}/>
     {routes.map((prop, key) => {
       if (prop.layout === "/admin") {
         return (

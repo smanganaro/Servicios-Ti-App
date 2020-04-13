@@ -7,21 +7,21 @@ import { withStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 //import ArrowUpward from "@material-ui/icons/ArrowUpward";
 import AccessTime from "@material-ui/icons/AccessTime";
-import BugReport from "@material-ui/icons/BugReport";
-import Code from "@material-ui/icons/Code";
-import Cloud from "@material-ui/icons/Cloud";
+//import BugReport from "@material-ui/icons/BugReport";
+//import Code from "@material-ui/icons/Code";
+//import Cloud from "@material-ui/icons/Cloud";
 // core components
 import GridItem from "../../components/Grid/GridItem.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
-import Table from "../../components/Table/Table.js";
-import Tasks from "../../components/Tasks/Tasks.js";
-import CustomTabs from "../../components/CustomTabs/CustomTabs.js";
+//import Table from "../../components/Table/Table.js";
+//import Tasks from "../../components/Tasks/Tasks.js";
+//import CustomTabs from "../../components/CustomTabs/CustomTabs.js";
 import Card from "../../components/Card/Card.js";
 import CardHeader from "../../components/Card/CardHeader.js";
 import CardBody from "../../components/Card/CardBody.js";
 import CardFooter from "../../components/Card/CardFooter.js";
 
-import { bugs, website, server } from "../../variables/general.js";
+//import { bugs, website, server } from "../../variables/general.js";
 
 /*import {
   dailySalesChart,
@@ -220,7 +220,15 @@ class Monitoreo extends React.Component {
               </Card>
             </GridItem>
           </GridContainer>
-          <GridContainer>
+        </div>
+    );
+  }
+}
+
+export default withStyles(styles) (Monitoreo);
+
+
+/*<GridContainer>
             <GridItem xs={12} sm={12} md={6}>
               <CustomTabs
                   title="Tasks:"
@@ -284,13 +292,7 @@ class Monitoreo extends React.Component {
                 </CardBody>
               </Card>
             </GridItem>
-          </GridContainer>
-        </div>
-    );
-  }
-}
-
-export default withStyles(styles) (Monitoreo);
+          </GridContainer>*/
 
 /*<p className={classes.cardCategory}>
                 <span className={classes.successText}>

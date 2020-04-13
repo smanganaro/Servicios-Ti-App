@@ -124,14 +124,21 @@ class Disponibilidad extends React.Component {
 
         return (
             <div>
-                <GridContainer>
+                <GridContainer >
 
-                    <GridItem xs={12} sm={12} md={6} lg={4}>
+                    <GridItem xs={12} sm={12} md={6} lg={4} >
                         <Card chart>
                             <CardHeader className={classes.nomarg} color="grey">
+                                <GridContainer spacing={0}
+                                               direction="column"
+                                               alignItems="center"
+                                               justify="center">
                                     <GaugeChart
-                                                id={"debito"} value={this.state.debitoP/30*100}
+                                        id={"debito"} value={this.state.debitoP/30*100}
                                     />
+
+                                </GridContainer>
+
                             </CardHeader>
 
 
@@ -144,9 +151,14 @@ class Disponibilidad extends React.Component {
                     <GridItem xs={12} sm={12} md={6} lg={4}>
                         <Card  chart>
                             <CardHeader color="grey">
-                                <GaugeChart
-                                    id={"credito"} value={this.state.creditoP/30*100}
-                                />
+                                <GridContainer spacing={0}
+                                               direction="column"
+                                               alignItems="center"
+                                               justify="center">
+                                    <GaugeChart
+                                        id={"credito"} value={this.state.creditoP/30*100}
+                                    />
+                                </GridContainer>
                             </CardHeader>
                             <CardBody>
                                 <h3 className={classes.service} >Crédito</h3>
@@ -157,9 +169,14 @@ class Disponibilidad extends React.Component {
                     <GridItem xs={12} sm={12} md={6} lg={4}>
                         <Card  chart>
                             <CardHeader  color="grey">
-                                <GaugeChart
-                                    id={"decidir"} value={this.state.decidirP/30*100}
-                                />
+                                <GridContainer spacing={0}
+                                               direction="column"
+                                               alignItems="center"
+                                               justify="center">
+                                    <GaugeChart
+                                        id={"decidir"} value={this.state.decidirP/30*100}
+                                    />
+                                </GridContainer>
                             </CardHeader>
                             <CardBody>
                                 <h3 className={classes.service}>Decidir</h3>
@@ -170,9 +187,14 @@ class Disponibilidad extends React.Component {
                     <GridItem xs={12} sm={12} md={6} lg={4}>
                         <Card chart>
                             <CardHeader color="grey">
-                                <GaugeChart
+                                <GridContainer spacing={0}
+                                               direction="column"
+                                               alignItems="center"
+                                               justify="center">
+                                    <GaugeChart
                                     id={"todopago"} value={this.state.todopagoP/30*100}
-                                />
+                                    />
+                                </GridContainer>
                             </CardHeader>
                             <CardBody>
                                 <h3 className={classes.service} >TodoPago</h3>
@@ -183,9 +205,14 @@ class Disponibilidad extends React.Component {
                     <GridItem xs={12} sm={12} md={6} lg={4}>
                         <Card  chart>
                             <CardHeader color="grey">
-                                <GaugeChart
-                                    id={"pmcspv"} value={this.state.pmcspvP/30*100}
-                                />
+                                <GridContainer spacing={0}
+                                               direction="column"
+                                               alignItems="center"
+                                               justify="center">
+                                    <GaugeChart
+                                        id={"pmcspv"} value={this.state.pmcspvP/30*100}
+                                    />
+                                </GridContainer>
                             </CardHeader>
                             <CardBody>
                                 <h3 className={classes.service}>PMC/SPV</h3>
@@ -196,9 +223,14 @@ class Disponibilidad extends React.Component {
                     <GridItem xs={12} sm={12} md={6} lg={4}>
                         <Card  chart>
                             <CardHeader color="grey">
-                                <GaugeChart
-                                    id={"qrp"} value={this.state.qrP/30*100}
-                                />
+                                <GridContainer spacing={0}
+                                               direction="column"
+                                               alignItems="center"
+                                               justify="center">
+                                    <GaugeChart
+                                        id={"qrp"} value={this.state.qrP/30*100}
+                                    />
+                                </GridContainer>
                             </CardHeader>
                             <CardBody>
                                 <h3 className={classes.service}>QR</h3>
@@ -209,9 +241,14 @@ class Disponibilidad extends React.Component {
                     <GridItem xs={12} sm={12} md={6} lg={4}>
                         <Card  chart>
                             <CardHeader color="grey">
-                                <GaugeChart
-                                    id={"phe"} value={this.state.pheP/30*100}
-                                />
+                                <GridContainer spacing={0}
+                                               direction="column"
+                                               alignItems="center"
+                                               justify="center">
+                                    <GaugeChart
+                                        id={"phe"} value={this.state.pheP/30*100}
+                                    />
+                                </GridContainer>
                             </CardHeader>
                             <CardBody>
                                 <h3 className={classes.service} >PHE</h3>
@@ -222,9 +259,14 @@ class Disponibilidad extends React.Component {
                     <GridItem xs={12} sm={12} md={6} lg={4}>
                         <Card chart>
                             <CardHeader color="grey">
-                                <GaugeChart
-                                    id={"vhb"} value={this.state.vhbP/30*100}
-                                />
+                                <GridContainer spacing={0}
+                                               direction="column"
+                                               alignItems="center"
+                                               justify="center">
+                                    <GaugeChart
+                                        id={"vhb"} value={this.state.vhbP/30*100}
+                                    />
+                                </GridContainer>
                             </CardHeader>
                             <CardBody>
                                 <h3 className={classes.service}>Visa Home Bancos</h3>
@@ -235,9 +277,14 @@ class Disponibilidad extends React.Component {
                     <GridItem xs={12} sm={12} md={6} lg={4}>
                         <Card chart>
                             <CardHeader color="grey">
-                                <GaugeChart
-                                    id={"vhs"} value={this.state.vhsP/30*100}
-                                />
+                                <GridContainer spacing={0}
+                                               direction="column"
+                                               alignItems="center"
+                                               justify="center">
+                                    <GaugeChart
+                                        id={"vhs"} value={this.state.vhsP/30*100}
+                                    />
+                                </GridContainer>
                             </CardHeader>
                             <CardBody>
                                 <h3 className={classes.service}>Visa Home Socios</h3>
@@ -248,9 +295,14 @@ class Disponibilidad extends React.Component {
                     <GridItem xs={12} sm={12} md={6} lg={4}>
                         <Card  chart>
                             <CardHeader color="grey">
-                                <GaugeChart
-                                    id={"wsbe"} value={this.state.wsbeP/30*100}
-                                />
+                                <GridContainer spacing={0}
+                                               direction="column"
+                                               alignItems="center"
+                                               justify="center">
+                                    <GaugeChart
+                                        id={"wsbe"} value={this.state.wsbeP/30*100}
+                                    />
+                                </GridContainer>
                             </CardHeader>
                             <CardBody>
                                 <h3 className={classes.service} >Web Service Banca Electronica</h3>
